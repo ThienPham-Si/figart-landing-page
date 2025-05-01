@@ -56,4 +56,4 @@ figart-alchemy/
 
 ## Author
 
-- Project by FigArt Alchemy, 2025
+- Project by FigArt Alchemy, 2025assets/images/featured-1.jpgassets/images/featured-2.jpgassets/images/featured-3.jpgassets/images/hero-bg.jpgassets/images/sci-fi-1.jpgassets/images/sci-fi-2.jpgassets/images/sci-fi-3.jpgassets/images/medieval-1.jpgassets/images/medieval-2.jpgassets/images/medieval-3.jpgassets/images/modern-1.jpgassets/images/modern-2.jpgassets/images/modern-3.jpgassets/images/fantasy-1.jpgassets/images/fantasy-2.jpgassets/images/fantasy-3.jpgassets/images/studio-photo.jpgassets/images/artist-photo.jpgassets/images/etsy-logo.pngassets/images/ebay-logo.pngassets/images/amazon-logo.png
