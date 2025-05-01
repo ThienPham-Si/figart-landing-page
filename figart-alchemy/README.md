@@ -1,50 +1,73 @@
-# React + TypeScript + Vite
+# FigArt Alchemy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A static website for FigArt Alchemy, a creative brand specializing in custom action figure accessories and 3D printed weapons for posing action figures.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+FigArt Alchemy is a static HTML, CSS, and JavaScript website designed to showcase custom action figure accessories and provide information about the brand. The site features a clean, responsive design optimized for both desktop and mobile viewing.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Responsive Design**: Fully responsive layout that works on devices of all sizes
+- **Modern UI**: Clean, professional aesthetic with subtle animations and effects
+- **Gallery System**: Filterable gallery to showcase signature works by category
+- **Contact Form**: Simple contact form for customer inquiries (requires external service for submission)
+- **Marketplace Links**: Easy access to external marketplace platforms where products are sold
 
-- Configure the top-level `parserOptions` property like this:
+## Site Structure
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **Home**: Introduction to the brand with featured works
+- **Signature Works**: Gallery of custom accessories categorized by style
+- **Shop**: Information about purchasing options with marketplace links
+- **About**: Artist bio and creative statement
+- **Contact**: Contact form and social media links
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Alpine.js (minimal JavaScript framework for UI interactions)
+- Font Awesome (for icons)
+
+## Local Development
+
+To view the website locally:
+
+1. Clone this repository
+2. Open any of the HTML files in your browser
+
+```bash
+# Example using a local server
+npx serve
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+For a better development experience, you can use a local development server like [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for VS Code or the `serve` npm package.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Deployment
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+This site is designed to be deployed on any static hosting service such as:
+
+- Netlify
+- GitHub Pages
+- Vercel
+- Any standard web hosting service
+
+Simply upload all files to your hosting provider of choice.
+
+## Customization
+
+- Images: Replace placeholder images in the `assets/images` directory with your own
+- Content: Edit the HTML files to update text content
+- Styling: Modify `css/style.css` to change colors, typography, or layout
+- Contact Form: Update the form submission handling in `js/main.js` to work with your preferred form submission service
+
+## Credits
+
+- Font Awesome for icons
+- Alpine.js for lightweight interactivity
+- Placeholder images from [Unsplash](https://unsplash.com)
+
+## License
+
+All rights reserved. This project and its contents are not open for redistribution or commercial use without permission.

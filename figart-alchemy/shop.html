@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop custom action figure accessories and 3D printed weapons from FigArt Alchemy">
+    <title>Shop | FigArt Alchemy</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body x-data="{ mobileMenuOpen: false }">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>FigArt<span>.Alchemy</span></h1>
+                </a>
+            </div>
+            
+            <button class="mobile-menu-toggle" @click="mobileMenuOpen = !mobileMenuOpen" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav :class="{'active': mobileMenuOpen}">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="signature-works.html">Signature Works</a></li>
+                    <li><a href="shop.html" class="active">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Shop Our Collection</h1>
+                <p>Find our custom action figure accessories on these marketplace platforms</p>
+            </div>
+        </section>
+
+        <section class="shop-intro">
+            <div class="container">
+                <div class="shop-content">
+                    <h2>Handcrafted Quality</h2>
+                    <p>Each FigArt Alchemy piece is meticulously designed, 3D printed with premium materials, and hand-finished to ensure exceptional quality and detail. Our accessories are created to seamlessly integrate with your action figure collection, enhancing both display and play value.</p>
+                    <p>We currently offer our products through established marketplaces to provide you with secure transactions, reliable shipping, and excellent customer service.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="marketplace-links">
+            <div class="container">
+                <div class="marketplace-grid">
+                    <div class="marketplace-card">
+                        <div class="marketplace-logo">
+                            <img src="assets/images/etsy-logo.png" alt="Etsy Marketplace">
+                        </div>
+                        <h3>Etsy Shop</h3>
+                        <p>Our primary marketplace featuring our complete collection with exclusive items and bundle deals.</p>
+                        <ul class="marketplace-features">
+                            <li><i class="fas fa-check"></i> Full product catalog</li>
+                            <li><i class="fas fa-check"></i> Custom order requests</li>
+                            <li><i class="fas fa-check"></i> Exclusive collector bundles</li>
+                            <li><i class="fas fa-check"></i> Direct artist communication</li>
+                        </ul>
+                        <a href="https://www.etsy.com/" target="_blank" rel="noopener noreferrer" class="btn primary">Visit Etsy Shop</a>
+                    </div>
+
+                    <div class="marketplace-card">
+                        <div class="marketplace-logo">
+                            <img src="assets/images/ebay-logo.png" alt="eBay Marketplace">
+                        </div>
+                        <h3>eBay Store</h3>
+                        <p>Selected products available with international shipping options and auction-style listings.</p>
+                        <ul class="marketplace-features">
+                            <li><i class="fas fa-check"></i> Weekly new listings</li>
+                            <li><i class="fas fa-check"></i> International shipping</li>
+                            <li><i class="fas fa-check"></i> Special auctions</li>
+                            <li><i class="fas fa-check"></i> Secure transactions</li>
+                        </ul>
+                        <a href="https://www.ebay.com/" target="_blank" rel="noopener noreferrer" class="btn primary">Visit eBay Store</a>
+                    </div>
+
+                    <div class="marketplace-card">
+                        <div class="marketplace-logo">
+                            <img src="assets/images/amazon-logo.png" alt="Amazon Handmade">
+                        </div>
+                        <h3>Amazon Handmade</h3>
+                        <p>Premium selection of our most popular items with fast shipping options.</p>
+                        <ul class="marketplace-features">
+                            <li><i class="fas fa-check"></i> Best-selling items</li>
+                            <li><i class="fas fa-check"></i> Prime shipping available</li>
+                            <li><i class="fas fa-check"></i> Customer reviews</li>
+                            <li><i class="fas fa-check"></i> Easy returns</li>
+                        </ul>
+                        <a href="https://www.amazon.com/handmade" target="_blank" rel="noopener noreferrer" class="btn primary">Visit Amazon Store</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="custom-orders">
+            <div class="container">
+                <div class="custom-orders-content">
+                    <h2>Custom Orders</h2>
+                    <p>Looking for something specific? We offer custom design services for collectors with unique needs.</p>
+                    <p>Whether you need a specific weapon for your display, a special accessory that doesn't exist on the market, or a complete custom set for your collection, we can help bring your vision to life.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn secondary">Contact for Custom Orders</a>
+                        <a href="signature-works.html" class="btn text-btn">View Our Portfolio <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="shipping-info">
+            <div class="container">
+                <h2>Shipping Information</h2>
+                <div class="shipping-grid">
+                    <div class="shipping-item">
+                        <div class="shipping-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <h3>Careful Packaging</h3>
+                        <p>All items are carefully packaged to ensure they arrive in perfect condition.</p>
+                    </div>
+                    <div class="shipping-item">
+                        <div class="shipping-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <h3>Worldwide Shipping</h3>
+                        <p>We ship to most countries worldwide with tracking on all orders.</p>
+                    </div>
+                    <div class="shipping-item">
+                        <div class="shipping-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3>Fast Delivery</h3>
+                        <p>Domestic orders typically ship within 1-3 business days.</p>
+                    </div>
+                    <div class="shipping-item">
+                        <div class="shipping-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Satisfaction Guaranteed</h3>
+                        <p>Not happy with your purchase? Contact us for our return policy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>FigArt<span>.Alchemy</span></h2>
+                    <p>Elevating action figure collections through custom accessories</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="signature-works.html">Signature Works</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FigArt Alchemy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

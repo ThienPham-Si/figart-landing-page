@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact FigArt Alchemy for custom action figure accessories and inquiries">
+    <title>Contact | FigArt Alchemy</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body x-data="{ mobileMenuOpen: false }">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>FigArt<span>.Alchemy</span></h1>
+                </a>
+            </div>
+            
+            <button class="mobile-menu-toggle" @click="mobileMenuOpen = !mobileMenuOpen" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav :class="{'active': mobileMenuOpen}">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="signature-works.html">Signature Works</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Have questions or custom requests? We'd love to hear from you</p>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-details">
+                        <h2>Get In Touch</h2>
+                        <p>We're always happy to discuss custom projects, answer questions about our products, or hear your feedback.</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h3>Email</h3>
+                                    <p><a href="mailto:info@figartalchemy.com">info@figartalchemy.com</a></p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h3>Response Time</h3>
+                                    <p>We typically respond within 24-48 hours</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-text">
+                                    <h3>Location</h3>
+                                    <p>San Francisco, California</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-connect">
+                            <h3>Connect With Us</h3>
+                            <p>Follow us on social media for the latest updates, behind-the-scenes content, and special offers.</p>
+                            <div class="social-icons">
+                                <a href="#" aria-label="Instagram" class="social-icon">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>@figartalchemy</span>
+                                </a>
+                                <a href="#" aria-label="Twitter" class="social-icon">
+                                    <i class="fab fa-twitter"></i>
+                                    <span>@figartalchemy</span>
+                                </a>
+                                <a href="#" aria-label="Facebook" class="social-icon">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <span>FigArt Alchemy</span>
+                                </a>
+                                <a href="#" aria-label="YouTube" class="social-icon">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>FigArt Alchemy</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container">
+                        <h2>Send Us a Message</h2>
+                        <form class="contact-form" x-data="{ formSubmitted: false, formError: false }" @submit.prevent="formSubmitted = true">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="" disabled selected>Select a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="custom">Custom Order Request</option>
+                                    <option value="support">Product Support</option>
+                                    <option value="wholesale">Wholesale Inquiry</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <label for="newsletter">Subscribe to our newsletter for updates and special offers</label>
+                            </div>
+                            
+                            <button type="submit" class="btn primary" x-bind:disabled="formSubmitted">
+                                <span x-show="!formSubmitted">Send Message</span>
+                                <span x-show="formSubmitted">Message Sent!</span>
+                            </button>
+                            
+                            <div class="form-success" x-show="formSubmitted" x-transition>
+                                <i class="fas fa-check-circle"></i>
+                                <p>Thank you for your message! We'll get back to you soon.</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-grid" x-data="{ activeQuestion: null }">
+                    <div class="faq-item">
+                        <div class="faq-question" @click="activeQuestion = activeQuestion === 1 ? null : 1">
+                            <h3>Do you offer international shipping?</h3>
+                            <span class="faq-icon" x-bind:class="{ 'active': activeQuestion === 1 }">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-minus"></i>
+                            </span>
+                        </div>
+                        <div class="faq-answer" x-show="activeQuestion === 1" x-transition>
+                            <p>Yes, we ship worldwide through our marketplace partners. Shipping rates and delivery times vary by location.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" @click="activeQuestion = activeQuestion === 2 ? null : 2">
+                            <h3>How long does a custom order take?</h3>
+                            <span class="faq-icon" x-bind:class="{ 'active': activeQuestion === 2 }">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-minus"></i>
+                            </span>
+                        </div>
+                        <div class="faq-answer" x-show="activeQuestion === 2" x-transition>
+                            <p>Custom orders typically take 2-4 weeks depending on complexity and our current workload. We'll provide a specific timeline when discussing your project.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" @click="activeQuestion = activeQuestion === 3 ? null : 3">
+                            <h3>What materials do you use?</h3>
+                            <span class="faq-icon" x-bind:class="{ 'active': activeQuestion === 3 }">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-minus"></i>
+                            </span>
+                        </div>
+                        <div class="faq-answer" x-show="activeQuestion === 3" x-transition>
+                            <p>We primarily use high-quality PLA and resin for 3D printing, with metal components for certain pieces. All materials are safe and durable for long-term display.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" @click="activeQuestion = activeQuestion === 4 ? null : 4">
+                            <h3>Do you offer wholesale options?</h3>
+                            <span class="faq-icon" x-bind:class="{ 'active': activeQuestion === 4 }">
+                                <i class="fas fa-plus"></i>
+                                <i class="fas fa-minus"></i>
+                            </span>
+                        </div>
+                        <div class="faq-answer" x-show="activeQuestion === 4" x-transition>
+                            <p>Yes, we offer wholesale options for retailers and specialty shops. Please contact us directly with your requirements for more information.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>FigArt<span>.Alchemy</span></h2>
+                    <p>Elevating action figure collections through custom accessories</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="signature-works.html">Signature Works</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FigArt Alchemy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

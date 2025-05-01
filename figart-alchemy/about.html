@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about FigArt Alchemy's mission and the artist behind our custom action figure accessories">
+    <title>About | FigArt Alchemy</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body x-data="{ mobileMenuOpen: false }">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>FigArt<span>.Alchemy</span></h1>
+                </a>
+            </div>
+            
+            <button class="mobile-menu-toggle" @click="mobileMenuOpen = !mobileMenuOpen" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav :class="{'active': mobileMenuOpen}">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="signature-works.html">Signature Works</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>About FigArt Alchemy</h1>
+                <p>Transforming passion into artistry, one accessory at a time</p>
+            </div>
+        </section>
+
+        <section class="about-story">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="assets/images/studio-photo.jpg" alt="FigArt Alchemy studio workspace">
+                    </div>
+                    <div class="about-content">
+                        <h2>Our Story</h2>
+                        <p>FigArt Alchemy began in 2023 as a passion project, born from the intersection of action figure collecting and digital sculpture. What started as personal customization projects quickly evolved into a dedicated pursuit of creating high-quality accessories for fellow collectors.</p>
+                        <p>Our mission is to enhance the collecting experience by providing meticulously designed and crafted accessories that complement and elevate action figures from various lines and manufacturers.</p>
+                        <div class="milestone-grid">
+                            <div class="milestone">
+                                <span class="milestone-number">1000+</span>
+                                <span class="milestone-text">Accessories Created</span>
+                            </div>
+                            <div class="milestone">
+                                <span class="milestone-number">500+</span>
+                                <span class="milestone-text">Happy Collectors</span>
+                            </div>
+                            <div class="milestone">
+                                <span class="milestone-number">4</span>
+                                <span class="milestone-text">Product Categories</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="artist-profile">
+            <div class="container">
+                <div class="artist-grid">
+                    <div class="artist-content">
+                        <h2>The Artist</h2>
+                        <p>Hi, I'm Alex Chen, the artist and founder behind FigArt Alchemy. With over a decade of experience in digital sculpture and 3D printing, combined with a lifelong passion for action figures, I bring a unique perspective to accessory design.</p>
+                        <p>My background in industrial design and traditional sculpting informs every piece I create, ensuring both aesthetic appeal and practical functionality. Each design begins with extensive research and sketching, followed by precise digital modeling and multiple prototype iterations.</p>
+                        <div class="artist-quote">
+                            <blockquote>
+                                "My goal is to create pieces that not only enhance your collection but inspire new possibilities for display and photography."
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="artist-image">
+                        <img src="assets/images/artist-photo.jpg" alt="Alex Chen, founder of FigArt Alchemy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="process">
+            <div class="container">
+                <h2>Our Process</h2>
+                <div class="process-grid">
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <i class="fas fa-pencil-alt"></i>
+                        </div>
+                        <h3>Design</h3>
+                        <p>Each piece begins with detailed sketches and research to ensure accuracy and functionality.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h3>3D Modeling</h3>
+                        <p>Digital sculpting with attention to scale, proportion, and detail.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <i class="fas fa-print"></i>
+                        </div>
+                        <h3>Prototyping</h3>
+                        <p>Multiple test prints and refinements to achieve the perfect result.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3>Finishing</h3>
+                        <p>Hand-finished with premium materials and careful attention to detail.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="values">
+            <div class="container">
+                <h2>Our Values</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <i class="fas fa-star"></i>
+                        <h3>Quality First</h3>
+                        <p>We never compromise on materials or craftsmanship, ensuring every piece meets our high standards.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Community Focus</h3>
+                        <p>We actively engage with the collecting community to understand needs and preferences.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Innovation</h3>
+                        <p>Constantly exploring new techniques and materials to push creative boundaries.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>FigArt<span>.Alchemy</span></h2>
+                    <p>Elevating action figure collections through custom accessories</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="signature-works.html">Signature Works</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FigArt Alchemy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

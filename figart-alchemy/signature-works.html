@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our signature custom action figure accessories and 3D printed weapons at FigArt Alchemy">
+    <title>Signature Works | FigArt Alchemy</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body x-data="{ mobileMenuOpen: false, activeCategory: 'all' }">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>FigArt<span>.Alchemy</span></h1>
+                </a>
+            </div>
+            
+            <button class="mobile-menu-toggle" @click="mobileMenuOpen = !mobileMenuOpen" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav :class="{'active': mobileMenuOpen}">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="signature-works.html" class="active">Signature Works</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Signature Works</h1>
+                <p>Explore our collection of custom action figure accessories and weapons</p>
+            </div>
+        </section>
+
+        <section class="gallery-filters">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button @click="activeCategory = 'all'" :class="{ active: activeCategory === 'all' }">All Works</button>
+                    <button @click="activeCategory = 'sci-fi'" :class="{ active: activeCategory === 'sci-fi' }">Sci-Fi</button>
+                    <button @click="activeCategory = 'medieval'" :class="{ active: activeCategory === 'medieval' }">Medieval</button>
+                    <button @click="activeCategory = 'modern'" :class="{ active: activeCategory === 'modern' }">Modern</button>
+                    <button @click="activeCategory = 'fantasy'" :class="{ active: activeCategory === 'fantasy' }">Fantasy</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="container">
+                <div class="gallery-grid">
+                    <!-- Sci-Fi Category -->
+                    <div class="gallery-item" x-show="activeCategory === 'all' || activeCategory === 'sci-fi'" x-transition>
+                        <div class="gallery-image">
+                            <img src="assets/images/sci-fi-1.jpg" alt="Futuristic plasma rifle">
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Plasma Rifle MK-7</h3>
+                            <p>Futuristic energy weapon with light-up features</p>
+                            <span class="category-tag">Sci-Fi</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" x-show="activeCategory === 'all' || activeCategory === 'sci-fi'" x-transition>
+                        <div class="gallery-image">
+                            <img src="assets/images/sci-fi-2.jpg" alt="Alien blaster pistol">
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Xenomorph Blaster</h3>
+                            <p>Alien-inspired sidearm with organic design elements</p>
+                            <span class="category-tag">Sci-Fi</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" x-show="activeCategory === 'all' || activeCategory === 'sci-fi'" x-transition>
+                        <div class="gallery-image">
+                            <img src="assets/images/sci-fi-3.jpg" alt="Futuristic shield">
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Energy Barrier Shield</h3>
+                            <p>Tactical defense accessory with translucent elements</p>
+                            <span class="category-tag">Sci-Fi</span>
+                        </div>
+                    </div>
+
+                    <!-- Medieval Category -->
+                    <div class="gallery-item" x-show="activeCategory === 'all' || activeCategory === 'medieval'" x-transition>
+                        <div class="gallery-image">
+                            <img src="assets/images/medieval-1.jpg" alt="Medieval longsword">
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Knight's Longsword</h3>
+                            <p>Historically accurate medieval weapon with detailed hilt</p>
+                            <span class="category-tag">Medieval</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" x-show="activeCategory === 'all' || activeCategory === 'medieval'" x-transition>
+                        <div class="gallery-image">
+                            <img src="assets/images/medieval-2.jpg" alt="Battle axe">
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Viking Battle Axe</h3>
+                            <p>Norse-inspired double-headed axe with rune engravings</p>
+                            <span class="category-tag">Medieval</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" x-show="activeCategory === 'all' || activeCategory === 'medieval'" x-transition>
+                        <div class="gallery-image">
+                            <img src="assets/images/medieval-3.jpg" alt="Knight's shield">
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Crusader Shield</h3>
+                            <p>Heater shield with customizable heraldry</p>
+                            <span class="category-tag">Medieval</span>
+                        </div>
+                    </div>
+
+                    <!-- Modern Category -->
+                    <div class="gallery-item" x-show="activeCategory === 'all' || activeCategory === 'modern'" x-transition>
+                        <div class="gallery-image">
+                            <img src="assets/images/modern-1.jpg" alt="Tactical rifle">
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Tactical Combat Rifle</h3>
+                            <p>Modern military-style weapon with attachments</p>
+                            <span class="category-tag">Modern</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" x-show="activeCategory === 'all' || activeCategory === 'modern'" x-transition>
+                        <div class="gallery-image">
+                            <img src="assets/images/modern-2.jpg" alt="Combat knife">
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Spec Ops Combat Knife</h3>
+                            <p>Tactical blade with serrated edge and sheath</p>
+                            <span class="category-tag">Modern</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" x-show="activeCategory === 'all' || activeCategory === 'modern'" x-transition>
+                        <div class="gallery-image">
+                            <img src="assets/images/modern-3.jpg" alt="Tactical gear">
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Combat Gear Set</h3>
+                            <p>Modern military accessories and equipment</p>
+                            <span class="category-tag">Modern</span>
+                        </div>
+                    </div>
+
+                    <!-- Fantasy Category -->
+                    <div class="gallery-item" x-show="activeCategory === 'all' || activeCategory === 'fantasy'" x-transition>
+                        <div class="gallery-image">
+                            <img src="assets/images/fantasy-1.jpg" alt="Magic staff">
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Archmage's Staff</h3>
+                            <p>Mystical staff with crystal focus and runes</p>
+                            <span class="category-tag">Fantasy</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" x-show="activeCategory === 'all' || activeCategory === 'fantasy'" x-transition>
+                        <div class="gallery-image">
+                            <img src="assets/images/fantasy-2.jpg" alt="Enchanted sword">
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Dragon's Bane Sword</h3>
+                            <p>Legendary blade with ethereal effects</p>
+                            <span class="category-tag">Fantasy</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" x-show="activeCategory === 'all' || activeCategory === 'fantasy'" x-transition>
+                        <div class="gallery-image">
+                            <img src="assets/images/fantasy-3.jpg" alt="Magic orb">
+                        </div>
+                        <div class="gallery-info">
+                            <h3>Mystic Orb</h3>
+                            <p>Magical artifact with translucent effects</p>
+                            <span class="category-tag">Fantasy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>FigArt<span>.Alchemy</span></h2>
+                    <p>Elevating action figure collections through custom accessories</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="signature-works.html">Signature Works</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FigArt Alchemy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
